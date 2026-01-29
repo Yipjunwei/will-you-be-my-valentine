@@ -12,22 +12,22 @@ export default function Page() {
 
   const getNoButtonText = () => {
     const phrases = [
-      "No",
-      "Are you sure?",
-      "What if I asked really nicely?",
-      "Pretty please",
-      "With a chocolate rice cake on top",
-      "What about a matcha frostie",
-      "PLEASE POOKIE",
-      "But :*(",
-      "I am going to die",
-      "Yep im dead",
-      "ok ur talking to nathan's ghost",
-      "please babe",
-      ":((((",
-      "PRETTY PLEASE",
-      "Estoy muerto",
-      "No :(",
+      "不行",
+      "你确定吗？",
+      "那如果我很认真地求你呢？",
+      "拜托啦",
+      "再加一块巧克力米饼当交换",
+      "那抹茶冰沙呢",
+      "求你了宝贝",
+      "可是 :(((((",
+      "我要死了",
+      "对，我已经死了",
+      "现在你在跟 Jun wei 的幽灵说话",
+      "拜托啦宝贝",
+      ":((((((((",
+      "真的真的拜托了",
+      "我死了",
+      "不嘛 :(",
     ];
 
     return phrases[Math.min(noCount, phrases.length - 1)];
@@ -38,7 +38,7 @@ export default function Page() {
       {yesPressed ? (
         <>
           <img src="https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-kiss-bear-kisses.gif" />
-          <div className="my-4 text-4xl font-bold">WOOOOOO!!! I love you pookie!! ;))</div>
+          <div className="my-4 text-4xl font-bold">哇！！！太爱你了，我的小瓜子～ </div>
         </>
       ) : (
         <>
@@ -46,20 +46,20 @@ export default function Page() {
             className="h-[200px]"
             src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"
           />
-          <h1 className="my-4 text-4xl">Will you be my Valentine?</h1>
+          <h1 className="my-4 text-4xl">2月14号你有空吗？我想预约你当我的情人节～</h1>
           <div className="flex items-center">
             <button
               className={`mr-4 rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700`}
               style={{ fontSize: yesButtonSize }}
               onClick={() => setYesPressed(true)}
             >
-              Yes
+              可以
             </button>
             <button
               onClick={handleNoClick}
               className=" rounded bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-700"
             >
-              {noCount === 0 ? "No" : getNoButtonText()}
+              {noCount === 0 ? "不可以" : getNoButtonText()}
             </button>
           </div>
         </>
